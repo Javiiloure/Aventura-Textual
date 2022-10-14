@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Mañana de locos</string>
-    <string name="una_ma_ana_en_una_casa_en_la_monsta_a_vive_una_joven_llamada_maki_que_tras_apagar_su_despertador_se_levanta_muy_cansada">Una mañana en una casa en la monstaña vive una joven llamada Maki, que tras apagar su despertador se levanta muy cansada</string>
+    <string name="una_ma_ana_en_una_casa_en_la_monsta_a_vive_una_joven_llamada_maki_que_tras_apagar_su_despertador_se_levanta_muy_cansada">Una mañana en una casa en la montaña vive una joven llamada Maki, que tras apagar su despertador se levanta muy cansada</string>
     <string name="textview">TextView</string>
     <string name="bostezo_dios_que_sue_o_n_no_me_apetece_ir_a_clase_aunque_deberia_pero_estoy_muy_cansado_y_si">(BOSTEZO)¡Dios que sueño!\n -No me apetece ir a clase aunque deberia pero estoy muy cansado. Y si ...</string>
     <string name="bostezo_dios_que_sue_o_n_n_no_me_apetece_ir_a_clase_aunque_deber_a">-(BOSTEZO) ¡Dios que sueño! \n\n -No me apetece ir a clase aunque debería</string>
@@ -8,4 +8,7 @@
     <string name="maki_no_va_a_clase">Maki no va a clase</string>
     <string name="maki_va_a_clase">Maki va a clase</string>
     <string name="maki">Maki</string>
+    <string name="en_un_lugar_lejano_en_una_casa_en_la_monsta_a_vive_una_joven_llamada_maki_que_tras_apagar_su_despertador_se_levanta_muy_cansada" />
+    <string name="en_un_lugar_muy_lejano_en_una_casa_en_la_monsta_a_vive_una_joven_llamada_maki_que_tras_apagar_su_despertador_se_levanta_muy_cansada">En un lugar muy lejano, en una casa en la montaña, vive una joven, llamada Maki, que tras apagar su despertador se levanta muy cansada.</string>
+    <string name="todo">TODO</string>
 </resources>

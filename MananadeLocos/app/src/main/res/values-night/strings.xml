@@ -2,4 +2,7 @@
 <resources>
     <string name="button">Button</string>
     <string name="maki_va_a_clase">Maki va a clase</string>
+    <string name="en_un_lugar_lejano_en_una_casa_en_la_monsta_a_vive_una_joven_llamada_maki_que_tras_apagar_su_despertador_se_levanta_muy_cansada" />
+    <string name="en_un_lugar_muy_lejano_en_una_casa_en_la_monsta_a_vive_una_joven_llamada_maki_que_tras_apagar_su_despertador_se_levanta_muy_cansada">En un lugar muy lejano, en una casa en la montaña, vive una joven, llamada Maki, que tras apagar su despertador se levanta muy cansada.</string>
+    <string name="todo">TODO</string>
 </resources>
