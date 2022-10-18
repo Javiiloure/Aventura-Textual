@@ -2,24 +2,28 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fondo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/habitacion"
     tools:context=".MainActivity"
     tools:visibility="visible">
 
     <TextView
         android:id="@+id/cajatexto1"
-        android:layout_width="391dp"
-        android:layout_height="144dp"
+        android:layout_width="390dp"
+        android:layout_height="118dp"
         android:text="@string/en_un_lugar_muy_lejano_en_una_casa_en_la_monsta_a_vive_una_joven_llamada_maki_que_tras_apagar_su_despertador_se_levanta_muy_cansada"
         android:textAlignment="center"
+        android:textColor="@color/white"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.472"
+        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.071" />
+        app:layout_constraintVertical_bias="0.055" />
 
     <ImageView
         android:id="@+id/maki"
@@ -31,26 +35,34 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.428"
+        app:layout_constraintVertical_bias="0.607"
         app:srcCompat="@drawable/makibien_" />
 
     <TextView
         android:id="@+id/dialogo"
-        android:layout_width="377dp"
-        android:layout_height="112dp"
+        android:layout_width="398dp"
+        android:layout_height="102dp"
+        android:background="@drawable/dialogos"
+        android:fontFamily="sans-serif-thin"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
         android:text="@string/bostezo_dios_que_sue_o_n_n_no_me_apetece_ir_a_clase_aunque_deber_a"
-        android:textSize="20sp"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="normal|bold"
+        android:typeface="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.793" />
+        app:layout_constraintVertical_bias="0.807" />
 
     <Button
         android:id="@+id/boton1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@android:color/transparent"
+        android:backgroundTint="@color/white"
         android:text="@string/maki_va_a_clase"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -64,7 +76,7 @@
         android:id="@+id/boton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@android:color/transparent"
+        android:backgroundTint="@color/white"
         android:text="@string/maki_no_va_a_clase"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -84,7 +96,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.442"
+        app:layout_constraintVertical_bias="0.617"
         app:srcCompat="@drawable/pixiesbien"
         tools:visibility="invisible" />
 
