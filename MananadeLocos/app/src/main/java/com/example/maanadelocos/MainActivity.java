@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
                                                 boton1.setText("Sacar perro");
                                                 boton2.setText("Tumbarse en el sofa");
                                                 boton1.setVisibility(view.VISIBLE);
-                                                boton1.setVisibility(view.VISIBLE);
+                                                boton2.setVisibility(view.VISIBLE);
                                             });
                                         });
                                     });
