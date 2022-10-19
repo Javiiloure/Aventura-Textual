@@ -3,6 +3,7 @@ package com.example.maanadelocos;
 import static android.view.View.INVISIBLE;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 
@@ -31,9 +32,15 @@ public class MainActivity extends AppCompatActivity {
         Button boton2 = findViewById(R.id.boton2);
         ConstraintLayout fondo = findViewById(R.id.fondo);
         ImageView inu = findViewById(R.id.inu);
+        ImageView missaoi = findViewById(R.id.missaoi);
+        ImageView makoto = findViewById(R.id.makoto);
+        Intent intent = new Intent(MainActivity.this, Game_over.class);
 
         pixies.setVisibility(INVISIBLE);
         inu.setVisibility(INVISIBLE);
+        missaoi.setVisibility(INVISIBLE);
+        makoto.setVisibility(INVISIBLE);
+
         boton2.setOnClickListener(view -> {
             cajatexto.setText("Maki se está apunto de dormir, otra vez, cuando escucha unos ruidos extraños procedentes de su armario.");
             dialogo.setText("- ¿Qué serán esos ruidos? - piensa.\n" + "- ¿Debería ir a echar un vistazo al armario?");
@@ -71,14 +78,13 @@ public class MainActivity extends AppCompatActivity {
                                     dialogo.setText("*Suspira*\n -Mira que eres lentita, si soy un duende de conciencia, mi misión es...");
                                     boton1.setVisibility(view.VISIBLE);
                                     boton2.setVisibility(view.VISIBLE);
-                                    boton2.setOnClickListener(view7 -> {
+                                    boton2.setOnClickListener(view7 -> { // Maki le da un portazo a pixies
                                         pixies.setVisibility(view.INVISIBLE);
                                         maki.setVisibility(view.VISIBLE);
                                         boton1.setVisibility(view.INVISIBLE);
                                         boton2.setVisibility(view.INVISIBLE);
                                         cajatexto.setText("Maki le cierra la puerta del armario en la cara.");
                                         dialogo.setText("-¿Que acaba de pasar?\n *Suenan las tripas* \n -Bueno, se lo que sea se queda ahí, voy a bajar a desayunar.");
-
                                         fondo.setOnClickListener(view8 -> {
                                             fondo.setBackgroundResource(R.drawable.casa);
                                             inu.setVisibility(view.VISIBLE);
@@ -91,23 +97,87 @@ public class MainActivity extends AppCompatActivity {
                                                 boton2.setText("Tumbarse en el sofa");
                                                 boton1.setVisibility(view.VISIBLE);
                                                 boton2.setVisibility(view.VISIBLE);
+                                                boton1.setOnClickListener(view10 -> { // Maki saca a pasear a Inu
+                                                    cajatexto.setText("Maki le pone la correa a Inu y salen a dar un paseo a la calle.");
+                                                    dialogo.setText("-Inu traeme la correa que vamos a salir a la calle.");
+                                                    boton1.setVisibility(view.INVISIBLE);
+                                                    boton2.setVisibility(view.INVISIBLE);
+                                                    fondo.setOnClickListener(view11 -> {
+                                                        fondo.setBackgroundResource(R.drawable.parada);
+                                                        dialogo.setText("");
+                                                        cajatexto.setText("Despues de un rato paseando, Maki escucha que alguien la llama a lo lejos  y se voltea para ver quien es.");
+                                                        fondo.setOnClickListener(view12 -> {
+                                                            inu.setVisibility(view.INVISIBLE);
+                                                            maki.setVisibility(view.INVISIBLE);
+                                                            missaoi.setVisibility(view.VISIBLE);
+                                                            dialogo.setText("-Señorita Kanroji, Por qué no ha asistido a clase?");
+                                                            fondo.setOnClickListener(view13 -> {
+                                                                missaoi.setVisibility(view.INVISIBLE);
+                                                                maki.setVisibility(view.VISIBLE);
+                                                                dialogo.setText("-Esque tenía que llevar a mi perro al veterinario y estamos de camino.");
+                                                                fondo.setOnClickListener(view14 -> {
+                                                                    maki.setVisibility(view.INVISIBLE);
+                                                                    missaoi.setVisibility(view.VISIBLE);
+                                                                    dialogo.setText("-¿Que perro? Yo aqui solo veo a su hermano.");
+                                                                    fondo.setOnClickListener(view15 -> {
+                                                                        cajatexto.setText("Maki recuerda que no tiene perro y shockeada mira hacia Inu.");
+                                                                        missaoi.setVisibility(view.INVISIBLE);
+                                                                        makoto.setVisibility(view.VISIBLE);
+                                                                        maki.setVisibility(view.VISIBLE);
+                                                                        dialogo.setText("-¡¿MAKOTO?!");
+                                                                        fondo.setOnClickListener(view16 -> {
+                                                                            cajatexto.setText("Maki comienza a escuchar como la llaman en su cabeza y se despierta en su habitación.");
+                                                                            fondo.setOnClickListener(view17 -> {
+                                                                                startActivity(intent);
+                                                                            });
+                                                                        });
+                                                                    });
+                                                                });
+                                                            });
+                                                        });
+                                                    });
+                                                });
+                                                boton2.setOnClickListener(view10 -> { //Maki no saca a inu a pasear
+                                                    inu.setVisibility(view.INVISIBLE);
+                                                    boton1.setVisibility(view.INVISIBLE);
+                                                    boton2.setVisibility(view.INVISIBLE);
+                                                    dialogo.setText("-Lo siento Inu, hoy estoy realmente cansada y necesito tumbarme un poco, más tarde de saco de paseo.");
+                                                    cajatexto.setText("Maki se tumba en el sofa a ver la television y se queda dormida hasta que una voz la despierta de su sueño.");
+                                                    fondo.setOnClickListener(view11 -> {
+                                                        startActivity(intent);
+                                                    });
+                                                });
                                             });
                                         });
                                     });
-                                    //boton1.setOnClickListener(); Sigue escuchando
-
-
+                                    boton1.setOnClickListener(view7 -> { //Maki sigue escuchando a pixies
+                                        boton1.setVisibility(view.INVISIBLE);
+                                        boton2.setVisibility(view.INVISIBLE);
+                                        cajatexto.setText("Maki sigue escuchando a pixies pero le aburre tanto qu se queda dormida, hasta que una voz la despierta de su sueño.");
+                                        dialogo.setText("-Guiarte por el buen camino, enseñarte a ser responsable...");
+                                        fondo.setOnClickListener(view8 -> {
+                                            startActivity(intent);
+                                        });
+                                    });
                                 });
                             });
                         });
                     });
                 });
             });
-            //boton2.setOnClickListener(); Maki no abre el armario
+            boton2.setOnClickListener(view1 -> { // Maki no abre el armario
+                boton1.setVisibility(view.INVISIBLE);
+                boton2.setVisibility(view.INVISIBLE);
+                dialogo.setText("");
+                cajatexto.setText("Maki ignora el sonido y sigue durmiendo hasta que una voz la despierta.");
+                fondo.setOnClickListener(view2 -> {
+                    startActivity(intent);
+                });
+            });
         });
 
-        boton1.setOnClickListener(view -> {
-            // System.out.println("Maki ha ido a clase");
+        boton1.setOnClickListener(view -> { // Maki va a clase
+            cajatexto.setText("Maki se prepara para ir a clase y sale de su casa hacia la parada de bus.");
         });
 
     }

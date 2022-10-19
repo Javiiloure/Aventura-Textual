@@ -112,16 +112,28 @@
         app:layout_constraintVertical_bias="0.636"
         app:srcCompat="@drawable/inu" />
 
-    <!--  <ImageView
-          android:id="@+id/inu"
-          android:layout_width="197dp"
-          android:layout_height="174dp"
-          app:layout_constraintBottom_toBottomOf="parent"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintHorizontal_bias="0.0"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toTopOf="parent"
-          app:layout_constraintVertical_bias="0.61"
-          app:srcCompat="@drawable/Inu" /> -->
+    <ImageView
+        android:id="@+id/missaoi"
+        android:layout_width="191dp"
+        android:layout_height="181dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.027"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.592"
+        app:srcCompat="@drawable/miss_aoi" />
+
+    <ImageView
+        android:id="@+id/makoto"
+        android:layout_width="175dp"
+        android:layout_height="179dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.025"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.59"
+        app:srcCompat="@drawable/makoto" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
