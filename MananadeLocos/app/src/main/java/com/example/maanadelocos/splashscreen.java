@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-public class slapshscreen extends AppCompatActivity {
+public class splashscreen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +22,7 @@ public class slapshscreen extends AppCompatActivity {
             public void onClick(View view) {
                 //Cuando se pulse la pantalla saltará al MainActivity con la primera escena.
 
-                Intent i = new Intent(slapshscreen.this,MainActivity.class);
+                Intent i = new Intent(splashscreen.this,MainActivity.class);
                 startActivity(i);
             }
         });

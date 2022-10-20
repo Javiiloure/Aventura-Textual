@@ -87,53 +87,15 @@
         app:layout_constraintVertical_bias="0.925" />
 
     <ImageView
-        android:id="@+id/pixies"
-        android:layout_width="192dp"
-        android:layout_height="180dp"
-        android:contentDescription="@string/todo"
+        android:id="@+id/imagen"
+        android:layout_width="188dp"
+        android:layout_height="173dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.617"
-        app:srcCompat="@drawable/pixiesbien"
-        tools:visibility="invisible" />
-
-    <ImageView
-        android:id="@+id/inu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.06"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.636"
-        app:srcCompat="@drawable/inu" />
-
-    <ImageView
-        android:id="@+id/missaoi"
-        android:layout_width="191dp"
-        android:layout_height="181dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.027"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.592"
-        app:srcCompat="@drawable/miss_aoi" />
-
-    <ImageView
-        android:id="@+id/makoto"
-        android:layout_width="175dp"
-        android:layout_height="179dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.025"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.59"
-        app:srcCompat="@drawable/makoto" />
+        app:layout_constraintVertical_bias="0.621"
+        app:srcCompat="@drawable/pixiesbien" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

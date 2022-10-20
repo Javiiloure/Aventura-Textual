@@ -18,16 +18,24 @@ public class Game_over extends AppCompatActivity {
 
         ImageView fin = findViewById(R.id.fin);
         Button continuar = findViewById(R.id.continuar);
-        //Intent in = new Intent(Game_over.this, MainActivity.class);
-        finish();
+        Intent intent = new Intent(Game_over.this, MainActivity.class);
 
-        /*
-        if (
-                continuar.setOnClickListener(view ->
-                        )) {
-
-        }
-        else {*/
-
-        }
+        fin.setOnClickListener(view -> {
+            metodoCerrar();
+        });
+        continuar.setOnClickListener(view -> {
+            startActivity(intent);
+        });
     }
+
+    public void metodoCerrar()
+    {
+        //aquí cerramos el actícity actual
+        finish();
+        //creamos un nuevo intent de action_main para el cierre de todo lo que esté abierto
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+    }
+}
