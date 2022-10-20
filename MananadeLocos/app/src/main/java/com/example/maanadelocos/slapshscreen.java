@@ -20,11 +20,12 @@ public class slapshscreen extends AppCompatActivity {
         portada.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Cuando se pulse, las acciones que realicen se escriben aquí.
+                //Cuando se pulse la pantalla saltará al MainActivity con la primera escena.
 
                 Intent i = new Intent(slapshscreen.this,MainActivity.class);
                 startActivity(i);
             }
         });
-            }
+
+    }
 }

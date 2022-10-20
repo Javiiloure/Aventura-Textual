@@ -6,8 +6,8 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
+import android.media.MediaPlayer;
 
-import androidx.annotation.ColorInt;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
@@ -34,7 +34,13 @@ public class MainActivity extends AppCompatActivity {
         ImageView inu = findViewById(R.id.inu);
         ImageView missaoi = findViewById(R.id.missaoi);
         ImageView makoto = findViewById(R.id.makoto);
-        Intent intent = new Intent(MainActivity.this, Game_over.class);
+        MediaPlayer calle = MediaPlayer.create(this, R.raw.sound_street);
+        MediaPlayer abre = MediaPlayer.create(this, R.raw.abrir);
+        MediaPlayer cierra = MediaPlayer.create(this, R.raw.cerrar);
+
+
+        //Cuando se termine la historia saltará a la pantalla de fin.
+        Intent intentt = new Intent(MainActivity.this, Game_over.class);
 
         pixies.setVisibility(INVISIBLE);
         inu.setVisibility(INVISIBLE);
@@ -50,8 +56,10 @@ public class MainActivity extends AppCompatActivity {
                 boton1.setVisibility(view.INVISIBLE);
                 boton2.setVisibility(view.INVISIBLE);
                 cajatexto.setText("Maki, todavía no muy convencida, se levanta y va a revisar su armario, encontrandose, en su interior, algo que nunca se podría haber imaginado.");
+                abre.start();
                 pixies.setVisibility(view.VISIBLE);
                 maki.setVisibility(view.INVISIBLE);
+                //abre.stop();
                 dialogo.setText("Ya iba siendo hora de que me abrieras, ¿No crees?\n" + "¿Te haces una ligera de lo que es dormir sobre zapatos con olor a pie durante años?");
                 fondo.setOnClickListener(view2 -> {
                     cajatexto.setText("Un hombrecillo muy bajito, con orejas puntiagudas y pelo verde, aparece ante ella con los brazos cruzados y mirada de desaprobación.");
@@ -84,10 +92,13 @@ public class MainActivity extends AppCompatActivity {
                                         boton1.setVisibility(view.INVISIBLE);
                                         boton2.setVisibility(view.INVISIBLE);
                                         cajatexto.setText("Maki le cierra la puerta del armario en la cara.");
+                                        cierra.start();
+                                        //cierra.stop();
                                         dialogo.setText("-¿Que acaba de pasar?\n *Suenan las tripas* \n -Bueno, se lo que sea se queda ahí, voy a bajar a desayunar.");
                                         fondo.setOnClickListener(view8 -> {
                                             fondo.setBackgroundResource(R.drawable.casa);
-                                            inu.setVisibility(view.VISIBLE);
+                                            pixies.setImageResource(R.drawable.inu);
+                                           // inu.setVisibility(view.VISIBLE);
                                             cajatexto.setText("Maki baja a la cocina, donde ve a su mascota Inu soltado junto a la puerta, y este le lloriquea para sallir.");
                                             dialogo.setText("-Buenos dias Inu, primero voy a desayunar y luego vemos si vamos a pasear");
                                             fondo.setOnClickListener(view9 -> {
@@ -104,11 +115,14 @@ public class MainActivity extends AppCompatActivity {
                                                     boton2.setVisibility(view.INVISIBLE);
                                                     fondo.setOnClickListener(view11 -> {
                                                         fondo.setBackgroundResource(R.drawable.parada);
+                                                        calle.start();
                                                         dialogo.setText("");
+                                                        //calle.pause();
                                                         cajatexto.setText("Despues de un rato paseando, Maki escucha que alguien la llama a lo lejos  y se voltea para ver quien es.");
                                                         fondo.setOnClickListener(view12 -> {
                                                             inu.setVisibility(view.INVISIBLE);
                                                             maki.setVisibility(view.INVISIBLE);
+                                                            inu.setImageResource(R.drawable.miss_aoi);
                                                             missaoi.setVisibility(view.VISIBLE);
                                                             dialogo.setText("-Señorita Kanroji, Por qué no ha asistido a clase?");
                                                             fondo.setOnClickListener(view13 -> {
@@ -122,13 +136,14 @@ public class MainActivity extends AppCompatActivity {
                                                                     fondo.setOnClickListener(view15 -> {
                                                                         cajatexto.setText("Maki recuerda que no tiene perro y shockeada mira hacia Inu.");
                                                                         missaoi.setVisibility(view.INVISIBLE);
+                                                                        missaoi.setImageResource(R.drawable.makoto);
                                                                         makoto.setVisibility(view.VISIBLE);
                                                                         maki.setVisibility(view.VISIBLE);
                                                                         dialogo.setText("-¡¿MAKOTO?!");
                                                                         fondo.setOnClickListener(view16 -> {
                                                                             cajatexto.setText("Maki comienza a escuchar como la llaman en su cabeza y se despierta en su habitación.");
                                                                             fondo.setOnClickListener(view17 -> {
-                                                                                startActivity(intent);
+                                                                                startActivity(intentt);
                                                                             });
                                                                         });
                                                                     });
@@ -144,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
                                                     dialogo.setText("-Lo siento Inu, hoy estoy realmente cansada y necesito tumbarme un poco, más tarde de saco de paseo.");
                                                     cajatexto.setText("Maki se tumba en el sofa a ver la television y se queda dormida hasta que una voz la despierta de su sueño.");
                                                     fondo.setOnClickListener(view11 -> {
-                                                        startActivity(intent);
+                                                        startActivity(intentt);
                                                     });
                                                 });
                                             });
@@ -156,7 +171,8 @@ public class MainActivity extends AppCompatActivity {
                                         cajatexto.setText("Maki sigue escuchando a pixies pero le aburre tanto qu se queda dormida, hasta que una voz la despierta de su sueño.");
                                         dialogo.setText("-Guiarte por el buen camino, enseñarte a ser responsable...");
                                         fondo.setOnClickListener(view8 -> {
-                                            startActivity(intent);
+                                            startActivity(intentt);
+                                            finish();
                                         });
                                     });
                                 });
@@ -171,7 +187,8 @@ public class MainActivity extends AppCompatActivity {
                 dialogo.setText("");
                 cajatexto.setText("Maki ignora el sonido y sigue durmiendo hasta que una voz la despierta.");
                 fondo.setOnClickListener(view2 -> {
-                    startActivity(intent);
+                    startActivity(intentt);
+
                 });
             });
         });
