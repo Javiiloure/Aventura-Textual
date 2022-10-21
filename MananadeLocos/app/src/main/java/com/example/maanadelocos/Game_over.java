@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -15,15 +16,16 @@ public class Game_over extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_over);
 
-
+        MediaPlayer end = MediaPlayer.create(this, R.raw.end);
         ImageView fin = findViewById(R.id.fin);
         Button continuar = findViewById(R.id.continuar);
         Intent intent = new Intent(Game_over.this, MainActivity.class);
-
+        end.start();
         fin.setOnClickListener(view -> {
             metodoCerrar();
         });
         continuar.setOnClickListener(view -> {
+            end.stop();
             startActivity(intent);
         });
     }

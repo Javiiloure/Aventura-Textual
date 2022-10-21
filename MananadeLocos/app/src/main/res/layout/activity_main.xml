@@ -11,13 +11,15 @@
 
     <TextView
         android:id="@+id/cajatexto1"
-        android:layout_width="390dp"
-        android:layout_height="118dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/en_un_lugar_muy_lejano_en_una_casa_en_la_monsta_a_vive_una_joven_llamada_maki_que_tras_apagar_su_despertador_se_levanta_muy_cansada"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:gravity="center"
+        android:background="@color/cardview_dark_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
